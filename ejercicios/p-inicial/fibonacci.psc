@@ -8,8 +8,9 @@ Algoritmo fibonacci
 	Leer num2
 	n1=0;
 	n2=1;
-	
-	Para num1<-1 Hasta num2 Con Paso 1 Hacer
+	Escribir "la serie es 0" 
+	Escribir "la serie es 1"
+	Para num1<-3 Hasta num2 Con Paso 1 Hacer
 		n3=n1+n2
 		n1=n2
 		n2=n3
