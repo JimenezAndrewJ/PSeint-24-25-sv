@@ -1,9 +1,21 @@
-Algoritmo sin_titulo
+Algoritmo JuegoDeLaMosca
 	Definir ma Como Entero
 	Definir fila, columna Como Entero
-	Definir mos Como Entero
+	Definir mosca Como Entero
 	Definir encontrado Como logico
+	Definir fm como entero
+	definir cm como entero
+	definir fu como entero
+	definir cu como entero
+	
+	
+	fm= azar(9)+1;
+	cm= azar(9)+1;
+	
+	
 	Dimension ma[10,10]
+	
+	mosca=azar(99)+1;
 	
 	// Inicializar la matriz con valores aleatorios
 	Para fila<-1 Hasta 10 Con Paso 1 Hacer
@@ -19,26 +31,80 @@ Algoritmo sin_titulo
 		Fin Para
 		Escribir " "
 	Fin Para
+	Escribir "     "
+	ma[fm,cm]= mosca
 	
-	// Buscar la "mosca"
-	encontrado = Falso
-	Mientras No encontrado Hacer
-		escribir "dame la mosca"
-		Leer mos
-		Para a1<-1 Hasta 10 Con Paso 1 Hacer
-			Para a2<-1 Hasta 10 Con Paso 1 Hacer
-				Si ma[a1, a2] = mos Entonces
-					encontrado = Verdadero
-					Escribir "Mosca encontrada en:", a1, ",", a2
-					// Salir de los bucles
-					a1 = 10
-					a2 = 10
-				Fin Si
-			Fin Para
+	Para fila<-1 Hasta 10 Con Paso 1 Hacer
+		Para columna<-1 Hasta 10 Con Paso 1 Hacer
+			Escribir Sin Saltar " ", ma[fila, columna], " "
 		Fin Para
-		
-	Fin Mientras
+		Escribir " "
+	Fin Para
+	//Para i<-1 Hasta fm Con Paso 1 Hacer
+	//	Para j<-1 Hasta cm Con Paso 1 Hacer
+	//		si fila=fm y columna=cm Entonces
+	//			ma[fila,columna]=mosca
+	//		FinSi
+//Fin Para
+	//Fin Para
 	
-	Escribir "Valor de la mosca:", mos
+	
+	
+	Escribir " esta es la posicion de del mosca fila "  fm," columna " cm 
+	
+	Escribir "esta es la mosca " mosca " " 
+	
+	Para contador<-1 hasta 10 Con Paso 1 hacer 
+		Escribir " "
+		Escribir "dame una fila"
+		Leer fu
+		Escribir "dame una columna"
+		leer cu
+		si fu= fm y cu=cm Entonces
+			contador=10
+			escribir "acertaste la fila"
+			escribir "acertaste la columna"
+			escribir "Fin del juego" 
+		SiNo
+			
+	si fu = fm Entonces
+		escribir "acertaste la fila"
+	sino 
+		si fu<fm Entonces
+			escribir "esta mas a la derecha en la fila " 
+		sino
+			Escribir "esta mas a la izquierda en la fila "
+		FinSi
+	FinSi
+	si cu = cm Entonces
+		escribir "acertaste la columna "
+	sino 
+		si cu<cm Entonces
+			escribir "esta mas a la derecha en la columna " 
+		sino
+			Escribir "esta mas a la izquierda en la columna "
+		FinSi
+	FinSi
+FinSi
+	fin para
+	// Buscar la "mosca"
+	//encontrado = Falso
+	//Mientras No encontrado Hacer
+	//	escribir "dame la mosca"
+		//Leer mos
+		//Para a1<-1 Hasta 10 Con Paso 1 Hacer
+//			Para a2<-1 Hasta 10 Con Paso 1 Hacer
+	//			Si ma[a1, a2] = mos Entonces
+		//			encontrado = Verdadero
+//					Escribir "Mosca encontrada en:", a1, ",", a2
+			// Salir de los bucles
+		//			a1 = 10
+			//		a2 = 10
+				//Fin Si
+			//Fin Para
+		//Fin Para
+		
+	//Fin Mientras
+	
 
 FinAlgoritmo
