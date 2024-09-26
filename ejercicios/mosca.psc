@@ -32,6 +32,7 @@ Algoritmo JuegoDeLaMosca
 		Escribir " "
 	Fin Para
 	Escribir "     "
+	
 	ma[fm,cm]= mosca
 	
 	Para fila<-1 Hasta 10 Con Paso 1 Hacer
@@ -62,31 +63,32 @@ Algoritmo JuegoDeLaMosca
 		leer cu
 		si fu= fm y cu=cm Entonces
 			contador=10
-			escribir "acertaste la fila"
-			escribir "acertaste la columna"
-			escribir "Fin del juego" 
-		SiNo
+			escribir "Acertaste la fila"
+			escribir "Acertaste la columna"
+			escribir "**** FIN DEL JUEGO ****" 
+		SiNo		
+			si fu = fm Entonces
+				escribir "Acertaste la fila"
+			sino 
+				si fu<fm Entonces
+					escribir "Esta mas a la derecha en la fila " 
+				sino
+					Escribir "Esta mas a la izquierda en la fila "
+				FinSi
+			FinSi
 			
-	si fu = fm Entonces
-		escribir "acertaste la fila"
-	sino 
-		si fu<fm Entonces
-			escribir "esta mas a la derecha en la fila " 
-		sino
-			Escribir "esta mas a la izquierda en la fila "
+			si cu = cm Entonces
+				escribir "Acertaste la columna "
+			sino 
+				si cu<cm Entonces
+					escribir "Esta mas a la derecha en la columna " 
+				sino
+					Escribir "Esta mas a la izquierda en la columna "
+				FinSi
+			FinSi
 		FinSi
-	FinSi
-	si cu = cm Entonces
-		escribir "acertaste la columna "
-	sino 
-		si cu<cm Entonces
-			escribir "esta mas a la derecha en la columna " 
-		sino
-			Escribir "esta mas a la izquierda en la columna "
-		FinSi
-	FinSi
-FinSi
 	fin para
+	
 	// Buscar la "mosca"
 	//encontrado = Falso
 	//Mientras No encontrado Hacer
